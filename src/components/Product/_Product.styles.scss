@@ -1,0 +1,42 @@
+.Product {
+  background-color: var(--color-white);
+  box-shadow: -1px 0px 15px -5px rgba(145, 145, 145, 0.8);
+  @apply flex flex-col max-w-60 min-h-70 items-center rounded-lg pt-3 min-w-52 justify-between;
+}
+
+.ImageProduct {
+  @apply w-auto max-h-full mb-2;
+}
+
+.AllTextContainerProduct {
+  //Container for all text elements
+  @apply px-4;
+}
+.TitleAndPriceContainerProduct {
+  //Container for title and price
+  @apply flex justify-evenly w-full items-center;
+}
+.H2Product {
+  color: var(--color-black);
+  @apply text-left text-base;
+}
+.PriceProduct {
+  color: var(--color-white);
+  background-color: var(--color-dark-gray);
+  @apply text-center text-base px-3 py-1 font-bold rounded-md;
+}
+.DescriptionProduct {
+  color: var(--color-black);
+  @apply text-left text-xs pb-1;
+}
+
+.ButtonProduct {
+  //Container for buy button
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  @apply w-full h-8 text-sm font-medium flex justify-center items-center gap-2 rounded-b-lg;
+}
+.IconProduct {
+  color: var(--color-white);
+  @apply w-7 h-7 opacity-75;
+}

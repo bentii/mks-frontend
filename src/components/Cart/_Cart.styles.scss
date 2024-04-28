@@ -1,0 +1,89 @@
+.Cart {
+  z-index: 1000;
+  background-color: var(--color-blue);
+  @apply flex flex-col justify-between w-80 fixed top-0 right-0 h-full shadow-[3px_5px_20px_0px_#1a202c];
+  @apply sm:w-80;
+  @apply md:w-96;
+  @apply lg:w-100;
+}
+.HeaderContainerCart {
+  //Container for the header of the BuyTab
+  @apply flex items-start mt-6 px-6;
+  @apply sm:px-6 sm:mt-6; 
+  @apply md:px-10 md:mt-10;
+  @apply lg:px-16 lg:mt-8;
+}
+.HeaderTitleContainerCart {
+}
+.H1Cart {
+  color: var(--color-white);
+  @apply font-bold text-xl w-32;
+  @apply sm:text-xl w-32;
+  @apply md:text-2xl w-48;
+  @apply lg:text-3xl w-60;
+}
+.HeaderButtonContainerCart {
+  //Container for the close button
+  margin-right: -15px;
+  @apply flex-1 flex justify-end;
+  @media screen and (min-width: 640px) {
+    margin-right: -15px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: -25px;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-right: -35px;
+  }
+}
+.ButtonCart {
+  background-color: var(--color-black);
+  @apply flex justify-center items-center rounded-full w-8 h-8;
+  @apply sm:w-8 sm:h-8 m-0;
+  @apply md:w-10 md:h-10;
+  @apply lg:w-12 lg:h-12;
+}
+.IconCloseCart {
+  color: var(--color-white);
+  @apply w-4 h-4;
+  @apply sm:w-4 sm:h-4;
+  @apply md:w-5 md:h-5;
+  @apply lg:w-6 lg:h-6;
+}
+.ProductContainerCart {
+  //Container for the products
+  &::-webkit-scrollbar {
+    background-color: var(--color-gray);
+    width: 0.3vw;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-gray);
+  }
+  
+  @apply flex flex-col flex-1 px-8 py-5 pr-10 gap-3 overflow-y-scroll h-fit;
+  @apply sm:px-8 sm:py-5 sm:pr-10 sm:gap-3;
+  @apply md:px-10 md:py-8 md:pr-12 md:gap-4;
+  @apply lg:px-12 lg:py-12 lg:pr-20 lg:gap-7;
+}
+.TotalContainerCart {
+  @apply flex justify-between items-center px-6 py-2 pr-6 h-24;
+  @apply sm:px-6 sm:py-2 lg:pr-8 sm:text-xl;
+  @apply md:px-10 md:py-8 lg:pr-12 md:text-2xl;
+  @apply lg:px-12 lg:py-10 lg:pr-20 lg:text-3xl;
+}
+.TotalContainerCart > p {
+  color: var(--color-white);
+  @apply font-bold text-2xl;
+  @apply sm:text-2xl;
+  @apply md:text-3xl;
+  @apply lg:text-3xl;
+}
+
+.BuyButtonCart {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  @apply flex w-full py-5 place-content-center font-bold text-xl;
+  @apply sm:py-5 sm:text-xl;
+  @apply md:py-8 md:text-2xl;
+  @apply lg:py-10 lg:text-3xl;
+}

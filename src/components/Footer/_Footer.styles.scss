@@ -1,0 +1,5 @@
+.Footer {
+  background-color: var(--color-gray);
+  color: var(--color-black);
+  @apply flex fixed bottom-0 w-full justify-center text-xs font-normal py-2;
+}

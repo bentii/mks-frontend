@@ -1,0 +1,60 @@
+.ProductCart {
+    background-color: var(--color-white);
+   @apply items-center rounded-md justify-between px-3 py-4 h-56 grid grid-cols-12 place-items-center gap-2;
+   @apply sm:px-3 sm:py-4 sm:h-56 sm:grid sm:grid-cols-12 sm:gap-2;
+   @apply md:px-10 md:py-3 md:h-56 md:grid md:grid-cols-12 md:gap-2; 
+   @apply lg:px-6 lg:py-6 lg:h-24 lg:flex-row lg:flex lg:gap-0;
+}
+.ImageProductCart {
+    @apply col-span-12 h-28;
+    @apply sm:col-span-12;
+    @apply lg:h-14;
+}
+.TitleProductCart {
+    @apply text-base col-span-12 w-52 text-center;
+    @apply sm:col-span-12;
+    @apply lg:text-sm lg:w-24;
+}
+.QuantityContrainerProductCart > span {
+    @apply hidden;
+    @apply sm:hidden;
+    @apply lg:text-xxxs lg:block;
+}
+.QuantityContrainerProductCart {
+    @apply justify-start col-span-6;
+    @apply sm:col-span-6;
+    @apply lg:flex lg:flex-col lg:h-12;
+}
+.PriceProductCart {
+    @media screen and (min-width: 120px){
+        background-color: var(--color-dark-gray);
+        color: var(--color-white);
+    }
+    @media screen and (min-width: 1025px){
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+    @apply text-base font-bold col-span-6 px-4 py-2 rounded-md cursor-pointer;
+    @apply sm:col-span-6 sm:text-base cursor-pointer;
+    @apply md:col-span-6 md:text-xl cursor-pointer;
+    @apply lg:text-sm lg:font-bold cursor-default;
+}
+.RemoveProductCart {
+    margin-left: -35px;
+    @media screen and (min-width: 1023px){
+        background-color: var(--color-white);
+    }
+    @media screen and (min-width: 1025px){
+        background-color: var(--color-black);
+    }
+    @apply col-span-12 h-5 w-5 relative bottom-52 left-30;
+    @apply sm:col-span-12 sm:h-5 sm:w-5 sm:relative sm:bottom-52 sm:left-30 ;
+    @apply md:col-span-12 md:h-5 md:w-5 md:relative md:bottom-52 md:left-36 ;
+    @apply lg:flex lg:items-center lg:justify-center lg:h-5 lg:w-5 lg:rounded-full lg:relative lg:bottom-12 lg:left-8;
+}
+.IconRemoveProductCart {
+    @apply h-5 w-5;  
+    @apply sm:h-5 sm:w-5;
+    @apply md:h-5 md:w-5;
+    @apply lg:h-3 lg:w-3;
+}

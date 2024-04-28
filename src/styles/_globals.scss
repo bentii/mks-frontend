@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'variables';
+
+html::-webkit-scrollbar {
+    background-color: var(--color-gray);
+    width: 0.3vw;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--color-middle-gray);
+  }

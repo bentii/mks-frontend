@@ -1,0 +1,53 @@
+.Header {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  @apply flex py-2 px-4 justify-between items-center;
+  @apply sm:py-2 sm:px-4;
+  @apply md:py-3 md:px-6;
+  @apply lg:py-7 lg:px-14;
+}
+
+.LogoContainerHeader {
+  //Container for logo and sub-logo
+  @apply flex items-center gap-0;
+  @apply sm:gap-0;
+  @apply md:gap-1;
+  @apply lg:gap-2;
+}
+.H1Header {
+  color: var(--color-white);
+  @apply text-2xl font-semibold;
+  @apply sm:text-2xl;
+  @apply md:text-3xl;
+  @apply lg:text-4.5xl;
+}
+.H2Header {
+  color: var(--color-white);
+  @apply flex items-center ml-1 mt-1 text-base font-light;
+  @apply sm:text-base;
+  @apply md:text-lg;
+  @apply lg:text-xl;
+}
+
+.CartButtonHeader {
+  //Container for cart button
+  background-color: var(--color-white);
+  color: var(--color-black);
+  @apply flex items-center justify-evenly w-12 h-6 rounded-lg relative;
+  @apply sm:w-12 sm:h-6;
+  @apply md:w-16 md:h-8;
+  @apply lg:w-21 lg:h-11;
+}
+.IconHeader {
+  @apply w-2.5 h-2.5;
+  @apply sm:w-2.5 sm:h-2.5;
+  @apply md:w-3 md:h-3;
+  @apply lg:w-5 lg:h-5;
+}
+.PHeader {
+  color: var(--color-black);
+  @apply text-xs font-bold;
+  @apply sm:text-xs;
+  @apply md:text-base;
+  @apply lg:text-lg;
+}
