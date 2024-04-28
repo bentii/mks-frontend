@@ -22,9 +22,11 @@ export default function RootLayout({
   return (
     <ReactQueryClientProvider>
       <html lang="en">
-        <body className={font.className} style={{ paddingBottom: "50px" }}>
-          <ReduxProvider>{children}</ReduxProvider>
-        </body>
+        <body className={font.className} style={{paddingBottom: "50px"}}>
+          <ReduxProvider>
+          {children}
+          </ReduxProvider>
+          </body>
       </html>
     </ReactQueryClientProvider>
   );

@@ -56,7 +56,7 @@ const ProductCart = ({ product }: { product: CartStateInterface }) => {
           quantity={product.quantity}
         />
       </div>
-      <h2 className="PriceProductCart">R${product.price}</h2>
+      <h2 className="PriceProductCart">R${product.price * product.quantity}</h2>
       <button
         className="RemoveProductCart"
         onClick={() => removeCartItem(product.id)}

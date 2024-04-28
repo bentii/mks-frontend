@@ -11,7 +11,7 @@ import { updateCart } from "@/redux/features/cart-slice";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [isCartVisible, setCartVisible] = useState(true);
+  const [isCartVisible, setCartVisible] = useState(false);
   const dispatch = useDispatch<AppDispatch>();
   const cartArray:CartStateInterface[] = useAppSelector((state) => state.cart);
 
