@@ -1,7 +1,7 @@
 .Product {
   background-color: var(--color-white);
   box-shadow: -1px 0px 15px -5px rgba(145, 145, 145, 0.8);
-  @apply flex flex-col max-w-60 min-h-70 items-center rounded-lg pt-3 min-w-52 justify-between;
+  @apply flex flex-col max-w-60 min-h-70 items-center rounded-lg pt-3 min-w-52 justify-between ;
 }
 
 .ImageProduct {
@@ -27,7 +27,7 @@
 }
 .DescriptionProduct {
   color: var(--color-black);
-  @apply text-left text-xs pb-1;
+  @apply text-left text-xs pb-1 ;
 }
 
 .ButtonProduct {

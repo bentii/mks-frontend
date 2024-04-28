@@ -2,8 +2,21 @@ import "./_Cart.styles.scss";
 import Icon from "../../assets/close-white.svg";
 import Image from "next/image";
 import ProductCart from "../ProductCart/ProductCart";
+import { AppDispatch, useAppSelector } from "@/redux/store";
+import { CartStateInterface } from "@/types/interfaces";
+import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 
-const Cart = () => {
+const Cart = ({ toggleCart }: { toggleCart: () => void }) => {
+  const [cartItems, setCartItems] = useState<CartStateInterface[]>([]);
+  const dispatch = useDispatch<AppDispatch>();
+  const cartArray: CartStateInterface[] = useAppSelector((state) => state.cart);
+  const total = Math.floor(cartArray.reduce((sum, product) => sum + product.price * product.quantity, 0));
+
+  useEffect(() => {
+    setCartItems(cartArray)
+  }, [cartArray]);
+  
   return (
     <div className="Cart">
       <div className="HeaderContainerCart">
@@ -14,27 +27,20 @@ const Cart = () => {
         </div>
         <div className="HeaderButtonContainerCart">
           <button className="ButtonCart">
-            <Image className="IconCloseCart" src={Icon} alt="Close Button" />
+            <Image className="IconCloseCart" src={Icon} alt="Close Button" onClick={toggleCart} />
           </button>
         </div>
       </div>
       <div className="ProductContainerCart">
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
-        <ProductCart />
+        {cartItems.map((product) => (
+          <ProductCart key={product.id} product={product} />
+        ))}
       </div>
       <div className="TotalContainerCart">
         <p>Total</p>
-        <p className="TotalPriceCart">R$ 100,00</p>
+        <p className="TotalPriceCart">R$ {total}</p>
       </div>
-      <button className="BuyButtonCart">Finalizar Compra</button>
+      <button className="BuyButtonCart" onClick={() => alert("Por favor me contrate, obrigado")}>Finalizar Compra</button>
     </div>
   );
 };

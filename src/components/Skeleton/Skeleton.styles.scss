@@ -1,0 +1,26 @@
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-img {
+    @apply min-h-40 min-w-36
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background: var(--color-gray);
+    }
+    100% {
+        background: var(--color-middle-gray);}
+}
+
+.skeleton-text {
+    min-height: 10px !important;
+    @apply w-48 m-2;
+}
+
+.skeleton-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

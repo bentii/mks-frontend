@@ -1,27 +1,25 @@
 import "./_Product.styles.scss";
+import { ProductInterface } from "../../types/interfaces";
 import Icon from "../../assets/shoppingBag.svg";
 import Image from "next/image";
 
-const Product = () => {
+const Product: React.FC<{ addToCart: (product: ProductInterface)=> any } & ProductInterface> = (props) => {
+  const { addToCart, ...product } = props;
   return (
     <div className="Product">
-      <img
-        className="ImageProduct"
-        alt="Apple Watch"
-        src="/images/apple-watch.png"
-      />
+      <img className="ImageProduct" alt={props.name} src={props.photo} />
       <div className="AllTextContainerProduct">
         <div className="TitleAndPriceContainerProduct">
-          <h2 className="H2Product">Apple Watch Series 4 GPS</h2>
+          <h2 className="H2Product">
+            {props.brand} {props.name}
+          </h2>
           <div className="PriceContainerProduct">
-            <p className="PriceProduct">R$399</p>
+            <p className="PriceProduct">{props.price}</p>
           </div>
         </div>
-        <p className="DescriptionProduct">
-          Redesigned from scratch and completely revised.
-        </p>
+        <p className="DescriptionProduct">{props.description}</p>
       </div>
-      <button className="ButtonProduct">
+      <button className="ButtonProduct" onClick={() => addToCart(product)}>
         <Image className="IconProduct" src={Icon} alt="Shooping Bag" />
         COMPRAR
       </button>
