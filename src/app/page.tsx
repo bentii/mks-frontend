@@ -50,7 +50,7 @@ export default function Home() {
     <>
       <Header toggleCart={toggleCartVisibility} />
       {isCartVisible && (
-        <Cart toggleCart={toggleCartVisibility} isVisible={isCartVisible} />
+        <Cart toggleCart={toggleCartVisibility} />
       )}
       <Products addToCart={addToCartHandler} />
       <Footer />
