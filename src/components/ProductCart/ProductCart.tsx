@@ -45,7 +45,7 @@ const ProductCart = ({ product }: { product: CartStateInterface }) => {
       <img className="ImageProductCart" alt="Apple Watch" src={product.photo} />
       <div className="TitleProductCart">
         <h2>
-          {product.brand} {product.name}
+          {product.name}
         </h2>
       </div>
       <div className="QuantityContrainerProductCart">

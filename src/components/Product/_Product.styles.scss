@@ -5,7 +5,8 @@
 }
 
 .ImageProduct {
-  @apply w-auto max-h-full mb-2;
+  max-height: 200px;
+  @apply w-auto mb-2;
 }
 
 .AllTextContainerProduct {
@@ -18,16 +19,24 @@
 }
 .H2Product {
   color: var(--color-black);
-  @apply text-left text-base;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  @apply text-left text-base flex-grow-0;
 }
 .PriceProduct {
   color: var(--color-white);
   background-color: var(--color-dark-gray);
-  @apply text-center text-base px-3 py-1 font-bold rounded-md;
+  @apply text-center text-base px-3 py-1 font-bold rounded-md flex-shrink-0;
 }
 .DescriptionProduct {
   color: var(--color-black);
-  @apply text-left text-xs pb-1 ;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  @apply text-left text-xs pb-1 flex-grow-0 flex-shrink-0;
 }
 
 .ButtonProduct {
