@@ -16,7 +16,7 @@ const Products = ({
 }: {
   addToCart: (product: ProductInterface) => void;
 }) => {
-  const { data, isError, isLoading } = useQuery({
+  const { data, isError, isLoading } = useQuery<any>({
     queryKey: ["products"],
     queryFn: () => api.getProducts(page, rows, orderBy, sortBy),
   });
