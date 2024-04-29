@@ -20,14 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactQueryClientProvider>
-      <html lang="en">
-        <body className={font.className} style={{paddingBottom: "50px"}}>
-          <ReduxProvider>
-          {children}
-          </ReduxProvider>
-          </body>
-      </html>
-    </ReactQueryClientProvider>
+    <html lang="en">
+      <body className={font.className} style={{ paddingBottom: "50px" }}>
+        <ReactQueryClientProvider>
+          <ReduxProvider>{children}</ReduxProvider>
+        </ReactQueryClientProvider>
+      </body>
+    </html>
   );
 }

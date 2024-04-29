@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ProductInterface } from '../types/ProductInterface';
+import { ProductInterface } from '../types/interfaces';
 const URL = process.env.ApiUrl;
 
 async function getProducts(page: number, rows: number, sortBy: string, orderBy: string): Promise<ProductInterface[]>{

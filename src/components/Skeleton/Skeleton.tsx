@@ -3,7 +3,7 @@ import "./Skeleton.styles.scss";
 
 const Skeleton = () => {
   return (
-    <div className="Product skeleton-container">
+    <div className="Product skeleton-container" data-testid="skeleton-container">
       <img className="skeleton skeleton-img" />
       <div className="AllTextContainerProduct">
         <div className="TitleAndPriceContainerProduct">

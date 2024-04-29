@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { AppDispatch, useAppSelector } from "@/redux/store";
 import { updateCart } from "@/redux/features/cart-slice";
 import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [isCartVisible, setCartVisible] = useState(false);
@@ -51,6 +52,7 @@ export default function Home() {
     <>
       <Header toggleCart={toggleCartVisibility} />
       {isCartVisible && <Cart toggleCart={toggleCartVisibility}/>}
+      
       <Products addToCart={addToCartHandler} />
       <Footer />
     </>
