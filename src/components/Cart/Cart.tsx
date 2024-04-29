@@ -26,8 +26,8 @@ const Cart = ({ toggleCart }: { toggleCart: () => void }) => {
           </h1>
         </div>
         <div className="HeaderButtonContainerCart">
-          <button className="ButtonCart">
-            <Image className="IconCloseCart" src={Icon} alt="Close Button" onClick={toggleCart} />
+          <button className="ButtonCart" onClick={toggleCart} >
+            <Image className="IconCloseCart" src={Icon} alt="Close Button"/>
           </button>
         </div>
       </div>

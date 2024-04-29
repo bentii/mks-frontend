@@ -8,3 +8,8 @@
     border-color: var(--color-gray);
     @apply border-l border-r px-2;
 }
+.ButtonCounter {
+    @apply flex-1;
+    padding: 8px; 
+    margin: -8px;
+}

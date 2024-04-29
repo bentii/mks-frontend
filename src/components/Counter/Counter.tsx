@@ -5,9 +5,9 @@ const Counter = (props: CounterProps) => {
   console.log(props.quantity);
   return (
     <div className="Counter">
-        <button className="ButtonMinusCounter" onClick={props.removeOne}>-</button>
+        <button className="ButtonCounter" onClick={props.removeOne}>-</button>
         <span className="ValueCounter">{props.quantity}</span>
-        <button className="ButtonPlusCounter" onClick={props.addOne}>+</button>
+        <button className="ButtonCounter" onClick={props.addOne}>+</button>
     </div>
   )
 }
